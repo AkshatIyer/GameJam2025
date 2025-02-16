@@ -172,7 +172,7 @@
     const alias_inputOnKeyDown = Input._onKeyDown;
     Input._onKeyDown = function(event) {
         alias_inputOnKeyDown.call(this, event);
-        if (/^[a-zA-Z0123456789.,!?;:'"()\-_+=<>$%^&* ]$/.test(event.key) || event.key === "Backspace") {
+        if (/^[a-zA-Z/0123456789.,!?;:'"()\-_+=<>$%^&* ]$/.test(event.key) || event.key === "Backspace") {
             BrandonFightManager.handleKeyInput(event.key);
         }
     };
